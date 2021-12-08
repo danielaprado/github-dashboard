@@ -1,0 +1,27 @@
+.navbar-container {
+  background-color: #021947;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding-top: 1vh;
+  padding-bottom: 1vh;
+  height: 5vh;
+}
+
+.navbar-search {
+  display: flex;
+  align-self: center;
+  flex: 1;
+  margin-left: 10vw;
+  margin-right: 10vw;
+  height: 2.5vh;
+  border-radius: 1rem;
+  padding-left: 1rem;
+  font-size: 1rem;
+  font-weight: 400;
+  outline: none;
+}
+
+.navbar-image {
+  margin-left: 5vw;
+}
