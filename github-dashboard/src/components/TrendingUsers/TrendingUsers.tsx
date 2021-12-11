@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchTopUsers } from "../../api/Services";
+import { fetchTopTrendingUsers } from "../../api/Services";
 import { UsersModel } from "../../models/TopUserModel";
 import { generateGuid } from "../../utils/generateGuid";
 import { UserDetailsCard } from "./UserDetailsCard/UserDetailsCard";
@@ -10,17 +10,13 @@ export const TrendingUsers = (): JSX.Element => {
   const [topUsers, setTopUsers] = useState<UsersModel>();
 
   const getTopUsers = async () => {
-    const users = await fetchTopUsers();
+    const users = await fetchTopTrendingUsers();
     setTopUsers(users);
   };
 
   useEffect(() => {
     getTopUsers();
   }, []);
-
-  useEffect(() => {
-    console.log(topUsers);
-  }, [topUsers]);
 
   return (
     <>

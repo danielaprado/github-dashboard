@@ -20,6 +20,8 @@
   font-size: 1rem;
   font-weight: 400;
   outline: none;
+  padding-top: 3px;
+  padding-bottom: 3px;
 }
 
 .navbar-image {

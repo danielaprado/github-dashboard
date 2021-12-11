@@ -1,0 +1,44 @@
+.repo-card {
+  width: 11.5%;
+  height: 20vh;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin-left: 2rem;
+  margin-right: 2rem;
+  padding: 20px;
+  border-top: 7px solid #021947;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.repo-text {
+  text-align: center;
+}
+
+.repo-language {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.repo-star-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.repo-start-count {
+  color: #021947;
+  font-size: 14px;
+}
+
+.repo-star-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.repo-description {
+  font-size: 12px;
+}
