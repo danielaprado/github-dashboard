@@ -1,10 +1,9 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
-import { NavBar } from "./components/NavBar";
-import { TrendingUsers as TrendingUsers } from "./components/TrendingUsers";
 import { MostActiveUsers as MostActiveUsers } from "./components/MostActiveUsers";
+import { NavBar } from "./components/NavBar/NavBar";
 import { TopRepositories } from "./components/TopRepositories";
+import { TrendingUsers } from "./components/TrendingUsers/TrendingUsers";
 
 function App() {
   return (

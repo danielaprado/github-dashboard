@@ -1,0 +1,13 @@
+.trending-user-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-top: 3%;
+  margin-bottom: 2%;
+  margin-left: 16%;
+}
+
+.user-grid {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}

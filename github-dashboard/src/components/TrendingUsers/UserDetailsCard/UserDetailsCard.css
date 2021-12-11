@@ -1,0 +1,74 @@
+.user-card {
+  width: 20%;
+  height: 100%;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  margin-left: 2rem;
+  margin-right: 2rem;
+}
+
+.user-thumbnail {
+  width: 100%;
+  height: 10vh;
+  object-fit: cover;
+  opacity: 50%;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+}
+
+.user-avatar-container {
+  position: fixed;
+  width: 17%;
+  transform: translate(45%, -50%);
+}
+
+.user-avatar {
+  border-radius: 50%;
+  width: 30%;
+}
+
+.user-text-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 15%;
+}
+
+.user-personal-info {
+  line-height: 1.5rem;
+}
+
+.user-followers-conatiner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+}
+
+.icon-avatar {
+  width: 5%;
+  margin-right: 6px;
+}
+
+.divider {
+  border-top: 1px solid #bbbbbb;
+  opacity: 50%;
+  width: 80%;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.user-repo-card-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 5rem;
+  margin-bottom: 20px;
+}
+
+.user-repo-card {
+  border: 1px solid #243a9c;
+  width: 80%;
+  border-left: 7px solid #243a9c;
+  border-radius: 6px;
+}
