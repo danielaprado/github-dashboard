@@ -1,31 +1,17 @@
-import { useEffect, useState } from "react";
-import { fetchTopRepos } from "../../api/Services";
-import { ReposModel } from "../../models/ReposModel";
+import { useSelector } from "react-redux";
+import { AppState } from "../../store/rootReducer";
 import { generateGuid } from "../../utils/generateGuid";
 import { Loader } from "../Loader/Loader";
 import { RepoDetailsCard } from "./RepoDetailsCard/RepoDetailsCard";
+import "./TopRepositories.css";
 
 export const TopRepositories = (): JSX.Element => {
-  const [topRepos, setTopRepos] = useState<ReposModel>();
+  const topRepos = useSelector((state: AppState) => state.app.topRepos);
 
-  const getTopRepos = async () => {
-    const topRepos = await fetchTopRepos();
-    setTopRepos(topRepos);
-  };
-
-  useEffect(() => {
-    getTopRepos();
-  }, []);
   return (
     <>
-      <div className="trending-user-title">Top Repositories</div>
-      <div
-        style={{
-          display: "flex",
-          flexDirection: "row",
-          justifyContent: "center",
-        }}
-      >
+      <div className="repos-title">Top Repositories</div>
+      <div className="repos-grid">
         {topRepos ? (
           topRepos.items.map((repo) => (
             <RepoDetailsCard key={generateGuid()} repo={repo} />

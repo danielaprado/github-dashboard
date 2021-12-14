@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { fetchSearchedTopUsers } from "../../api/Services";
+import { fetchSearchedTrendingUsers } from "../../api/Services";
 import logo from "../../assets/logo.png";
 import "./NavBar.css";
 
@@ -7,7 +7,7 @@ export const NavBar = (): JSX.Element => {
   const [searchValue, setSearchValue] = useState<string>("");
 
   const getSearchedTopUsers = async () => {
-    const userInfo = await fetchSearchedTopUsers(searchValue);
+    const userInfo = await fetchSearchedTrendingUsers(searchValue);
   };
 
   useEffect(() => {
