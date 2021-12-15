@@ -1,5 +1,5 @@
 import { SagaIterator } from "redux-saga";
-import { call, put, takeLatest } from "redux-saga/effects";
+import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
 import {
   fetchSearchedActiveUsers,
   fetchSearchedTrendingUsers,
@@ -18,7 +18,8 @@ export function* handleFetchTrendingUsers(
     const response: UsersModel = yield call(fetchTopTrendingUsers);
     yield put(AppActions.fetchTrendingUsers.success(response));
   } catch (error) {
-    yield put(AppActions.fetchTrendingUsers.failure());
+    console.log("trending users", error);
+    yield put(AppActions.fetchTrendingUsers.failure({ hasError: true }));
   }
 }
 
@@ -29,7 +30,9 @@ export function* handleFetchActiveUsers(
     const response: UsersModel = yield call(fetchTopActiveUsers);
     yield put(AppActions.fetchActiveUsers.success(response));
   } catch (error) {
-    yield put(AppActions.fetchActiveUsers.failure());
+    console.log("active users", error);
+
+    yield put(AppActions.fetchActiveUsers.failure({ hasError: true }));
   }
 }
 
@@ -40,7 +43,9 @@ export function* handleFetchTopRepos(
     const response: ReposModel = yield call(fetchTopRepos);
     yield put(AppActions.fetchTopRepos.success(response));
   } catch (error) {
-    yield put(AppActions.fetchTopRepos.failure());
+    console.log("top repos", error);
+
+    yield put(AppActions.fetchTopRepos.failure({ hasError: true }));
   }
 }
 
@@ -54,7 +59,8 @@ export function* handleUpdateTrendingUsers({
     );
     yield put(AppActions.updateTrendingUsers.success(response));
   } catch (error) {
-    yield put(AppActions.updateTrendingUsers.failure());
+    console.log("update trending users", error);
+    yield put(AppActions.updateTrendingUsers.failure({ hasError: true }));
   }
 }
 
@@ -68,7 +74,8 @@ export function* handleUpdateActiveUsers({
     );
     yield put(AppActions.updateActiveUsers.success(response));
   } catch (error) {
-    yield put(AppActions.updateActiveUsers.failure());
+    console.log("update active users", error);
+    yield put(AppActions.updateActiveUsers.failure({ hasError: true }));
   }
 }
 
@@ -82,7 +89,8 @@ export function* handleUpdateTopRepos({
     );
     yield put(AppActions.updateTopRepos.success(response));
   } catch (error) {
-    yield put(AppActions.updateTopRepos.failure());
+    console.log("update repos", error);
+    yield put(AppActions.updateTopRepos.failure({ hasError: true }));
   }
 }
 
@@ -93,7 +101,7 @@ export function* AppSagas(): SagaIterator {
   );
   yield takeLatest(AppActions.fetchActiveUsers.request, handleFetchActiveUsers);
   yield takeLatest(AppActions.fetchTopRepos.request, handleFetchTopRepos);
-  yield takeLatest(
+  yield takeEvery(
     AppActions.updateTrendingUsers.request,
     handleUpdateTrendingUsers
   );

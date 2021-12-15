@@ -32,37 +32,37 @@ const fetchTrendingUsers = createAsyncAction(
   AppActionTypes.FETCH_TRENDING_USERS_REQUEST,
   AppActionTypes.FETCH_TRENDING_USERS_SUCCESS,
   AppActionTypes.FETCH_TRENDING_USERS_FAILURE
-)<undefined, UsersModel, undefined>();
+)<undefined, UsersModel, { hasError: boolean }>();
 
 const fetchActiveUsers = createAsyncAction(
   AppActionTypes.FETCH_ACTIVE_USERS_REQUEST,
   AppActionTypes.FETCH_ACTIVE_USERS_SUCCESS,
   AppActionTypes.FETCH_ACTIVE_USERS_FAILURE
-)<undefined, UsersModel, undefined>();
+)<undefined, UsersModel, { hasError: boolean }>();
 
 const fetchTopRepos = createAsyncAction(
   AppActionTypes.FETCH_TOP_REPOS_REQUEST,
   AppActionTypes.FETCH_TOP_REPOS_SUCCESS,
   AppActionTypes.FETCH_TOP_REPOS_FAILURE
-)<undefined, ReposModel, undefined>();
+)<undefined, ReposModel, { hasError: boolean }>();
 
 const updateTrendingUsers = createAsyncAction(
   AppActionTypes.UPDATE_TRENDING_USERS_REQUEST,
   AppActionTypes.UPDATE_TRENDING_USERS_SUCCESS,
   AppActionTypes.UPDATE_TRENDING_USERS_FAILURE
-)<{ search: string }, UsersModel, undefined>();
+)<{ search: string }, UsersModel, { hasError: boolean }>();
 
 const updateActiveUsers = createAsyncAction(
   AppActionTypes.UPDATE_ACTIVE_USERS_REQUEST,
   AppActionTypes.UPDATE_ACTIVE_USERS_SUCCESS,
   AppActionTypes.UPDATE_ACTIVE_USERS_FAILURE
-)<{ search: string }, UsersModel, undefined>();
+)<{ search: string }, UsersModel, { hasError: boolean }>();
 
 const updateTopRepos = createAsyncAction(
   AppActionTypes.UPDATE_TOP_REPOS_REQUEST,
   AppActionTypes.UPDATE_TOP_REPOS_SUCCESS,
   AppActionTypes.UPDATE_TOP_REPOS_FAILURE
-)<{ search: string }, ReposModel, undefined>();
+)<{ search: string }, ReposModel, { hasError: boolean }>();
 
 export const AppActions = {
   fetchTrendingUsers,

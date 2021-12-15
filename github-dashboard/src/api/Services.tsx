@@ -4,7 +4,7 @@ import { UserDetailedInfo } from "../models/UserDetailedInfo";
 
 export const fetchTopTrendingUsers = async (): Promise<UsersModel> => {
   const response = await fetch(
-    "https://api.github.com/search/users?q=followers:>=0&page=1&per_page=3&order=desc"
+    "https://api.github.com/search/users?q=followers:>=0+created:>2021-11-14&page=1&per_page=3&order=desc&type=user"
   );
 
   const topTrendingUsers = await response.json();
@@ -14,7 +14,7 @@ export const fetchTopTrendingUsers = async (): Promise<UsersModel> => {
 
 export const fetchTopActiveUsers = async (): Promise<UsersModel> => {
   const response = await fetch(
-    "https://api.github.com/search/users?q=repos:<=10&page=1&per_page=3"
+    "https://api.github.com/search/users?q=repos:>=0+created:>2021-11-14&page=1&per_page=3&order=desc"
   );
 
   const topActiveUsers = await response.json();
@@ -26,8 +26,11 @@ export const fetchTopActiveUsers = async (): Promise<UsersModel> => {
 
 export const fetchTopRepos = async (): Promise<ReposModel> => {
   const response = await fetch(
-    "https://api.github.com/search/repositories?q=stars:>=1&sort=stars&page=1&per_page=4&order=desc"
+    "https://api.github.com/search/repositories?q=stars:>=1&sort=stars&order=desc&page=1&per_page=4"
   );
+  //https://api.github.com/search/repositories?q=stars:>=1&sort=stars&order=desc&page=1&per_page=4
+
+  //OLD https://api.github.com/search/repositories?q=stars:>=1&sort=stars&page=1&per_page=4&order=desc
 
   const topRepos = await response.json();
   console.log(topRepos);
@@ -46,15 +49,12 @@ export const fetchSearchedTrendingUsers = async (
   return searchedTopUsers;
 };
 
-export const fetchSearchedActiveUsers = async (
+export const fetchSearchedActiveUsers = (
   searchValue: string
-): Promise<UsersModel> => {
-  const response = await fetch(
+): Promise<Response> => {
+  return fetch(
     `https://api.github.com/search/users?q=${searchValue}&page=1&per_page=3&order=desc`
   );
-
-  const searchedActiveUsers = await response.json();
-  return searchedActiveUsers;
 };
 
 export const fetchSearchedTopRepos = async (
