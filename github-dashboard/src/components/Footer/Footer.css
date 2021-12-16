@@ -1,0 +1,14 @@
+.footer-container {
+  height: 20vh;
+  background-color: #021947;
+  margin-top: 10vh;
+  color: #d8d9e1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-item {
+  margin: 1.5vh;
+}

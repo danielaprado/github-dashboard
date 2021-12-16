@@ -43,85 +43,91 @@ export const UserDetailsCard = ({
               alt="User's cover"
             />
           </div>
-          <div style={{ zIndex: 3, marginTop: "6vh" }}>
-            <img
-              className="user-avatar"
-              src={user.avatar_url}
-              alt="User's avatar"
-            />
-          </div>
-          <div className="user-text-info">
-            <div className="user-personal-info">
-              {!userDetails?.name ? (
-                <div style={{ color: "#bcbeca" }}>
-                  Ups, can't reach user's username 😔
-                </div>
-              ) : (
-                userDetails?.name
-              )}
+          <div style={{ zIndex: 10, height: "100%" }}>
+            <div style={{ marginTop: "6vh" }}>
+              <img
+                className="user-avatar"
+                src={user.avatar_url}
+                alt="User's avatar"
+              />
             </div>
-            <div className="user-personal-info">
-              {!userDetails?.email ? (
-                <div style={{ color: "#bcbeca" }}>
-                  Ups, can't reach user's email 😔
+            <div className="user-text-info">
+              <div className="user-personal-info">
+                {!userDetails?.name ? (
+                  <div style={{ color: "#bcbeca" }}>
+                    Ups, can't reach user's username 😔
+                  </div>
+                ) : (
+                  userDetails?.name
+                )}
+              </div>
+              <div className="user-personal-info">
+                {!userDetails?.email ? (
+                  <div style={{ color: "#bcbeca" }}>
+                    Ups, can't reach user's email 😔
+                  </div>
+                ) : (
+                  userDetails?.email
+                )}
+              </div>
+              <div className="user-followers-container">
+                <img src={avatar} className="icon-avatar" alt="icon avatar" />
+                <div>
+                  <b>{userDetails?.followers}</b> Followers
                 </div>
-              ) : (
-                userDetails?.email
-              )}
-            </div>
-            <div className="user-followers-conatiner">
-              <img src={avatar} className="icon-avatar" alt="icon avatar" />
-              <div>
-                <b>{userDetails?.followers}</b> Followers
               </div>
             </div>
-          </div>
-          <hr className="divider" />
-          <div className="user-repo-card-container">
-            <div className="user-repo-card">
-              <div
-                style={{
-                  display: "flex",
-                  flexDirection: "row",
-                  justifyContent: "space-between",
-                  fontSize: "1rem",
-                  height: "50%",
-                  paddingLeft: "1rem",
-                }}
-              >
-                <div
-                  style={{
-                    alignSelf: "center",
-                    color: "#243a9c",
-                  }}
-                >
-                  Hello world
-                </div>
+            <hr className="divider" />
+            <div className="user-repo-card-container">
+              <div className="user-repo-card">
                 <div
                   style={{
                     display: "flex",
                     flexDirection: "row",
-                    justifyContent: "flex-end",
-                    alignSelf: "center",
+                    justifyContent: "space-between",
+                    fontSize: "1rem",
+                    height: "50%",
+                    paddingLeft: "1rem",
+                  }}
+                >
+                  <div
+                    style={{
+                      alignSelf: "center",
+                      color: "#243a9c",
+                    }}
+                  >
+                    Hello world
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      flexDirection: "row",
+                      justifyContent: "flex-end",
+                      alignSelf: "center",
+                      alignItems: "center",
+                      paddingRight: "1rem",
+                    }}
+                  >
+                    <img
+                      src={star}
+                      className="start-avatar"
+                      alt="star avatar"
+                    />
+                    <div className="user-follower-count">56</div>
+                  </div>
+                </div>
+                <div
+                  style={{
+                    fontSize: "13px",
+                    display: "flex",
                     alignItems: "center",
+                    height: "50%",
+                    paddingLeft: "1rem",
                     paddingRight: "1rem",
                   }}
                 >
-                  <img src={star} className="start-avatar" alt="star avatar" />
-                  <div className="user-follower-count">56</div>
+                  This is my hello world project!
                 </div>
-              </div>
-              <div
-                style={{
-                  fontSize: "13px",
-                  display: "flex",
-                  alignItems: "center",
-                  height: "50%",
-                  paddingLeft: "1rem",
-                  paddingRight: "1rem",
-                }}
-              >
-                This is my hello world project!
               </div>
             </div>
           </div>

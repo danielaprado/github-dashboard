@@ -1,3 +1,10 @@
+@media only screen and (max-width: 798px) {
+  .repos-grid {
+    flex-direction: column !important;
+    align-items: center !important;
+  }
+}
+
 .repos-title {
   font-size: 1.5rem;
   font-weight: 700;
@@ -11,15 +18,3 @@
   flex-direction: row;
   justify-content: center;
 }
-
-/* .repos-grid:nth-child(1) {
-  background-color: red;
-}
-
-.repos-grid:nth-child(2) {
-  background-color: yellow;
-}
-
-.repos-grid:nth-child(3) {
-  background-color: green;
-} */

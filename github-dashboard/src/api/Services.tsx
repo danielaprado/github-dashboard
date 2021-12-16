@@ -3,10 +3,10 @@ import { UsersModel } from "../models/UsersModel";
 import { UserDetailedInfo } from "../models/UserDetailedInfo";
 
 const myHeaders = new Headers({
-  "Authorization": `token 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`,
+  "Authorization": `token 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`,
   "User-Agent": "request",
   "Content-Type": "application/json",
-  "Accept": "application/vnd.github.v3+json",
+  Accept: "application/vnd.github.v3+json",
 });
 
 export const fetchTopTrendingUsers = async (): Promise<UsersModel> => {

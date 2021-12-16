@@ -1,11 +1,24 @@
+@media only screen and (max-width: 518px) {
+  .repo-card {
+    width: 71% !important;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 519px) and (max-width: 798px) {
+  .repo-card {
+    width: 48% !important;
+    margin-bottom: 2rem;
+  }
+}
+
 .repo-card {
-  width: 11.5%;
+  width: 13.5%;
   height: 20vh;
+  margin-left: 1rem;
+  margin-right: 1rem;
   border-radius: 8px;
   box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
-  margin-left: 2rem;
-  margin-right: 2rem;
-  padding: 20px;
+  padding: 1%;
   display: flex;
   flex-direction: column;
   align-items: center;

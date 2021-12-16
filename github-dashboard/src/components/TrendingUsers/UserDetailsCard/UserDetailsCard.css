@@ -73,7 +73,7 @@
   line-height: 1.5rem;
 }
 
-.user-followers-conatiner {
+.user-followers-container {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -89,16 +89,14 @@
   border-top: 1px solid #bbbbbb;
   opacity: 50%;
   width: 80%;
-  margin-top: 20px;
-  margin-bottom: 20px;
 }
 
 .user-repo-card-container {
   display: flex;
   justify-content: center;
   align-content: center;
-  height: 5rem;
-  margin-bottom: 20px;
+  height: 9vh;
+  margin-top: 2vh;
 }
 
 .user-repo-card {

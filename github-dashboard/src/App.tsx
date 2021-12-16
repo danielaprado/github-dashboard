@@ -1,7 +1,8 @@
 import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import "./App.css";
-import { MostActiveUsers } from "./components/MostActiveUsers";
+import { Footer } from "./components/Footer/Footer";
+import { MostActiveUsers } from "./components/MostActiveUsers/MostActiveUsers";
 import { NavBar } from "./components/NavBar/NavBar";
 import { TopRepositories } from "./components/TopRepositories/TopRepositories";
 import { TrendingUsers } from "./components/TrendingUsers/TrendingUsers";
@@ -21,6 +22,7 @@ function App() {
       <TrendingUsers />
       <MostActiveUsers />
       <TopRepositories />
+      <Footer />
     </div>
   );
 }

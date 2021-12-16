@@ -1,9 +1,9 @@
-import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import { ReposModel } from "../../models/ReposModel";
 import { AppState } from "../../store/rootReducer";
 import { generateGuid } from "../../utils/generateGuid";
 import { Loader } from "../Loader/Loader";
+import { NotFound } from "../NotFound/NotFound";
 import { RepoDetailsCard } from "./RepoDetailsCard/RepoDetailsCard";
 import "./TopRepositories.css";
 
@@ -38,6 +38,7 @@ export const TopRepositories = (): JSX.Element => {
   return (
     <>
       <div className="repos-title">Top Repositories</div>
+
       <div className="repos-grid">
         {!hasError ? (
           repos?.items?.length > 0 ? (
@@ -49,7 +50,7 @@ export const TopRepositories = (): JSX.Element => {
               />
             ))
           ) : (
-            <div>No results</div>
+            <NotFound />
           )
         ) : (
           <Loader />

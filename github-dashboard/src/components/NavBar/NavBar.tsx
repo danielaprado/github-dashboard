@@ -4,6 +4,7 @@ import { fetchSearchedTrendingUsers } from "../../api/Services";
 import logo from "../../assets/logo.png";
 import { AppActions } from "../../store/app/actions";
 import "./NavBar.css";
+import "font-awesome/css/font-awesome.min.css";
 
 export const NavBar = (): JSX.Element => {
   const dispatch = useDispatch();
@@ -24,9 +25,11 @@ export const NavBar = (): JSX.Element => {
   return (
     <div className="navbar-container">
       <img className="navbar-image" src={logo} alt="Uphill logo" />
+
       <input
         className="navbar-search"
-        placeholder="Search"
+        type="text"
+        placeholder="&#xF002; Search"
         onChange={(event) => setSearchValue(event.target.value)}
       />
     </div>
