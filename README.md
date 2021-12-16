@@ -1,7 +1,10 @@
-# Getting Started
+# Github Dashboard
 
-To run this project you need to be go to the directory ./github-dashboard.
-Then run
+This web-app shows the most popular GitHub users, the most active GitHub users and their popular repositories
+
+## Getting Started
+
+To run this project you need to run
 
 ### `npm i`
 
@@ -12,6 +15,10 @@ After that just run
 ### `npm start`
 
 and move around 😊
+
+## Design
+
+Powered by UpHill
 
 ## Icons
 
