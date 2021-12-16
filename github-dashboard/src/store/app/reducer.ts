@@ -17,6 +17,7 @@ export const AppReducer = (
         },
       };
     case AppActionTypes.FETCH_TRENDING_USERS_FAILURE:
+      console.log(action.payload.hasError);
       return {
         ...state,
         trendingUsers: {
@@ -33,6 +34,8 @@ export const AppReducer = (
         },
       };
     case AppActionTypes.FETCH_ACTIVE_USERS_FAILURE:
+      console.log(action.payload.hasError);
+
       return {
         ...state,
         activeUsers: {
@@ -49,6 +52,8 @@ export const AppReducer = (
         },
       };
     case AppActionTypes.FETCH_TOP_REPOS_FAILURE:
+      console.log(action.payload.hasError);
+
       return {
         ...state,
         repos: {
@@ -65,6 +70,7 @@ export const AppReducer = (
         },
       };
     case AppActionTypes.UPDATE_TRENDING_USERS_FAILURE:
+      console.log(action.payload.hasError);
       return {
         ...state,
         trendingUsers: {
@@ -81,6 +87,7 @@ export const AppReducer = (
         },
       };
     case AppActionTypes.UPDATE_ACTIVE_USERS_FAILURE:
+      console.log(action.payload.hasError);
       return {
         ...state,
         activeUsers: {
@@ -97,6 +104,7 @@ export const AppReducer = (
         },
       };
     case AppActionTypes.UPDATE_TOP_REPOS_FAILURE:
+      console.log(action.payload.hasError);
       return {
         ...state,
         repos: {

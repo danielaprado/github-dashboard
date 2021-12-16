@@ -11,11 +11,13 @@ export const NavBar = (): JSX.Element => {
 
   useEffect(() => {
     if (searchValue !== "") {
-      //dispatch(AppActions.updateTrendingUsers.request({ search: searchValue }));
-      //dispatch(AppActions.updateActiveUsers.request({ search: searchValue }));
-      //dispatch(AppActions.updateTopRepos.request({ search: searchValue }));
+      dispatch(AppActions.updateTrendingUsers.request({ search: searchValue }));
+      dispatch(AppActions.updateActiveUsers.request({ search: searchValue }));
+      dispatch(AppActions.updateTopRepos.request({ search: searchValue }));
     } else {
       dispatch(AppActions.fetchTrendingUsers.request());
+      dispatch(AppActions.fetchActiveUsers.request());
+      dispatch(AppActions.fetchTopRepos.request());
     }
   }, [searchValue]);
 

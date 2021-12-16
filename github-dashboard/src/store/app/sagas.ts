@@ -2,6 +2,7 @@ import { SagaIterator } from "redux-saga";
 import { call, put, takeEvery, takeLatest } from "redux-saga/effects";
 import {
   fetchSearchedActiveUsers,
+  fetchSearchedTopRepos,
   fetchSearchedTrendingUsers,
   fetchTopActiveUsers,
   fetchTopRepos,
@@ -84,7 +85,7 @@ export function* handleUpdateTopRepos({
 }: ReturnType<typeof AppActions.updateTopRepos.request>): SagaIterator {
   try {
     const response: ReposModel = yield call(
-      fetchSearchedActiveUsers,
+      fetchSearchedTopRepos,
       payload.search
     );
     yield put(AppActions.updateTopRepos.success(response));
@@ -101,7 +102,7 @@ export function* AppSagas(): SagaIterator {
   );
   yield takeLatest(AppActions.fetchActiveUsers.request, handleFetchActiveUsers);
   yield takeLatest(AppActions.fetchTopRepos.request, handleFetchTopRepos);
-  yield takeEvery(
+  yield takeLatest(
     AppActions.updateTrendingUsers.request,
     handleUpdateTrendingUsers
   );

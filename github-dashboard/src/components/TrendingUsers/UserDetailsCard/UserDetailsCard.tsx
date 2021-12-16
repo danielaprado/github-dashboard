@@ -1,4 +1,3 @@
-import { url } from "inspector";
 import { useEffect, useState } from "react";
 import { fetchUser } from "../../../api/Services";
 import avatar from "../../../assets/avatar.png";
@@ -27,12 +26,24 @@ export const UserDetailsCard = ({
     <div className="user-card">
       <div className="user-card-inner">
         <div className="user-card-front">
-          <img
-            className="user-thumbnail"
-            src={user.avatar_url}
-            alt="User's thumbnail"
-          />
-          <div className="user-avatar-container">
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              zIndex: -1,
+            }}
+          >
+            <div className="user-thumbnail-mask"></div>
+            <img
+              className="user-thumbnail"
+              src={user.avatar_url}
+              alt="User's cover"
+            />
+          </div>
+          <div style={{ zIndex: 3, marginTop: "6vh" }}>
             <img
               className="user-avatar"
               src={user.avatar_url}
@@ -41,10 +52,22 @@ export const UserDetailsCard = ({
           </div>
           <div className="user-text-info">
             <div className="user-personal-info">
-              {!userDetails?.name ? "null" : userDetails?.name}
+              {!userDetails?.name ? (
+                <div style={{ color: "#bcbeca" }}>
+                  Ups, can't reach user's username 😔
+                </div>
+              ) : (
+                userDetails?.name
+              )}
             </div>
             <div className="user-personal-info">
-              {!userDetails?.email ? "null@email.com" : userDetails?.email}
+              {!userDetails?.email ? (
+                <div style={{ color: "#bcbeca" }}>
+                  Ups, can't reach user's email 😔
+                </div>
+              ) : (
+                userDetails?.email
+              )}
             </div>
             <div className="user-followers-conatiner">
               <img src={avatar} className="icon-avatar" alt="icon avatar" />
@@ -104,30 +127,69 @@ export const UserDetailsCard = ({
           </div>
         </div>
         <div className="user-card-back">
-          <img
-            className="user-back-avatar"
-            src={user.avatar_url}
-            alt="User's avatar"
-          />
-          <div className="user-text-info">
-            <div className="user-personal-info">
-              {!userDetails?.name ? "null" : userDetails?.name}
-            </div>
-            <div className="user-personal-info">
-              {!userDetails?.email ? "null@email.com" : userDetails?.email}
-            </div>
-            <div className="user-followers-conatiner">
-              <img src={avatar} className="icon-avatar" alt="icon avatar" />
-              <div>
-                <b>{userDetails?.followers}</b> Followers
-              </div>
-            </div>
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              width: "100%",
+              height: "100%",
+              opacity: "10%",
+            }}
+          >
+            <img
+              style={{ width: "100%", height: "100%" }}
+              src={user.avatar_url}
+              alt="User's cover"
+            />
           </div>
           <div
-            className="user-button"
-            onClick={() => window.open(`https://github.com/${user.login}`)}
+            style={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              justifyContent: "space-around",
+              zIndex: 3,
+              height: "100%",
+            }}
           >
-            Open Profile
+            <img
+              className="user-back-avatar"
+              src={user.avatar_url}
+              alt="User's avatar"
+            />
+            <div className="user-text-info">
+              <div className="user-personal-info">
+                {!userDetails?.name ? (
+                  <div style={{ color: "#bcbeca" }}>
+                    Ups, can't reach user's username 😔
+                  </div>
+                ) : (
+                  userDetails?.name
+                )}
+              </div>
+              <div className="user-personal-info">
+                {!userDetails?.email ? (
+                  <div style={{ color: "#bcbeca" }}>
+                    Ups, can't reach user's email 😔
+                  </div>
+                ) : (
+                  userDetails?.email
+                )}
+              </div>
+              <div className="user-followers-conatiner">
+                <img src={avatar} className="icon-avatar" alt="icon avatar" />
+                <div>
+                  <b>{userDetails?.followers}</b> Followers
+                </div>
+              </div>
+            </div>
+            <div
+              className="user-button"
+              onClick={() => window.open(`https://github.com/${user.login}`)}
+            >
+              Open Profile
+            </div>
           </div>
         </div>
       </div>

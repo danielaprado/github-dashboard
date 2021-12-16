@@ -20,15 +20,15 @@ export const MostActiveUsers = (): JSX.Element => {
       <div className="trending-user-title">Most Active Users</div>
       <div className="user-grid">
         {!hasError ? (
-          activeUsers.items.length > 0 ? (
+          activeUsers?.items?.length > 0 ? (
             activeUsers.items.map((user) => (
               <UserDetailsCard key={generateGuid()} user={user} />
             ))
           ) : (
-            <Loader />
+            <div>No results</div>
           )
         ) : (
-          <div>No results</div>
+          <Loader />
         )}
       </div>
     </>
