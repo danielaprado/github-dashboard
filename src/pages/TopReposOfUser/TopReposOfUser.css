@@ -1,0 +1,101 @@
+@media only screen and (max-width: 518px) {
+  .repo-user-card {
+    width: 71% !important;
+    margin-bottom: 2rem;
+  }
+}
+@media only screen and (min-width: 519px) and (max-width: 798px) {
+  .repo-user-card {
+    width: 48% !important;
+    margin-bottom: 2rem;
+  }
+}
+
+.repo-user-avatar {
+  border-radius: 50%;
+  height: 10vh;
+  background-color: #ffffff;
+  border: 1px solid #303a51;
+}
+
+.repo-user-icon-avatar {
+  width: 5%;
+  margin-right: 6px;
+}
+
+.repo-user-main-title {
+  font-size: 1.7rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 3vh;
+}
+
+.repo-user-followers-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.repo-user-title {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 3vh;
+}
+
+.repo-user-grid {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.repo-user-card {
+  width: 20vw;
+  height: 20vh;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 3px 10px rgb(0 0 0 / 0.2);
+  padding: 1%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.repo-user-card:hover {
+  cursor: crosshair;
+}
+
+.repo-user-text {
+  text-align: center;
+}
+
+.repo-user-language {
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.repo-user-star-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.repo-user-start-count {
+  color: #021947;
+  font-size: 14px;
+}
+
+.repo-user-star-icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.repo-user-description {
+  font-size: 12px;
+}
