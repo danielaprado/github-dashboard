@@ -1,7 +1,6 @@
 import { RepoInfoModel } from '../../../models/RepoInfoModel';
 import './RepoDetailsCard.css';
 import start from '../../../assets/star.png';
-import { Link } from 'react-router-dom';
 
 export const RepoDetailsCard = ({
   repo,

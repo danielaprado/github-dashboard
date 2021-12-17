@@ -4,7 +4,7 @@ import { UserDetailedInfo } from '../models/UserDetailedInfo';
 import { RepoInfoModel } from '../models/RepoInfoModel';
 
 const myHeaders = new Headers({
-  Authorization: `token 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`,
+  // Authorization: `token XXX`,
   'User-Agent': 'request',
   'Content-Type': 'application/json',
   Accept: 'application/vnd.github.v3+json',

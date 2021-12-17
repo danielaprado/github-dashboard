@@ -1,0 +1,57 @@
+.repository-card-container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  height: 9vh;
+  margin-top: 2vh;
+}
+
+.repository-card {
+  border: 1px solid #243a9c;
+  width: 80%;
+  border-left: 7px solid #243a9c;
+  border-radius: 6px;
+}
+
+.repository-card-organization {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  font-size: 16px;
+  height: 50%;
+  padding-left: 16px;
+}
+
+.repository-card-star-avatar {
+  width: 20px;
+  height: 20px;
+  margin-right: 6px;
+}
+
+.repository-card-user-follower-count {
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.repository-card-name {
+  align-self: center;
+  color: #243a9c;
+}
+
+.repository-card-name-star {
+  font-size: 13px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: flex-start;
+  padding-right: 16px;
+}
+
+.repository-card-description {
+  font-size: 13px;
+  display: flex;
+  align-items: center;
+  height: 50%;
+  padding-left: 16px;
+  padding-right: 16px;
+}

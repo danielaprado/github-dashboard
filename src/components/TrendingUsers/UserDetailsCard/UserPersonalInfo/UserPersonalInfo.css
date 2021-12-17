@@ -1,0 +1,22 @@
+.user-personal-info-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 5%;
+  }
+  
+  .user-personal-info-text {
+    line-height: 1.5rem;
+  }
+  
+  .user-personal-followers-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 1rem;
+  }
+  
+  .user-personal-icon-avatar {
+    width: 5%;
+    margin-right: 6px;
+  }

@@ -3,8 +3,8 @@ import { ReposModel } from '../../models/ReposModel';
 import { AppState } from '../../store/rootReducer';
 import { generateGuid } from '../../utils/generateGuid';
 import { mapIdColor } from '../../utils/mapIdColor';
-import { Loader } from '../Loader/Loader';
-import { NotFound } from '../NotFound/NotFound';
+import { Loader } from '../shared/Loader/Loader';
+import { NotFound } from '../shared/NotFound/NotFound';
 import { RepoDetailsCard } from './RepoDetailsCard/RepoDetailsCard';
 import './TopRepositories.css';
 

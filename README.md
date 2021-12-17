@@ -14,7 +14,7 @@ After that just run
 
 ### `npm start`
 
-and move around 😊
+and have fun 😊
 
 ## Design
 

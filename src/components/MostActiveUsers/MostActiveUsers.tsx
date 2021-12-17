@@ -3,8 +3,8 @@ import { useSelector } from "react-redux";
 import { UsersModel } from "../../models/UsersModel";
 import { AppState } from "../../store/rootReducer";
 import { generateGuid } from "../../utils/generateGuid";
-import { Loader } from "../Loader/Loader";
-import { NotFound } from "../NotFound/NotFound";
+import { Loader } from "../shared/Loader/Loader";
+import { NotFound } from "../shared/NotFound/NotFound";
 import { UserDetailsCard } from "../TrendingUsers/UserDetailsCard/UserDetailsCard";
 import "./MostActiveUsers.css";
 
