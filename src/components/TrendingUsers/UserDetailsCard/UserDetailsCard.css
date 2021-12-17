@@ -25,11 +25,6 @@
   perspective: 1000px;
 }
 
-.user-card:hover {
-  /* transform: rotateY(180deg);
-  background-color: #243a9c; */
-}
-
 .user-thumbnail {
   width: 100%;
   height: 25%;
@@ -137,23 +132,24 @@
   border: 1px solid #303a51;
 }
 
+.user-link {
+  text-decoration: none;
+  color: #ffffff;
+}
+
 .user-button {
-  text-align: center;
   border: 2px solid #ffffff;
-  width: 30%;
   padding: 8px 6px 8px 6px;
-  border-radius: 20px;
   font-weight: 550;
+  border-radius: 30px;
 }
 
 .user-button:hover {
   background-color: white;
   color: #243a9c;
-  text-align: center;
   border: 2px solid #ffffff;
-  width: 30%;
   padding: 8px 6px 8px 6px;
-  border-radius: 20px;
+  border-radius: 30px;
   font-weight: 550;
 }
 

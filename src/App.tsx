@@ -1,12 +1,12 @@
-import React, { useEffect } from "react";
-import { useDispatch } from "react-redux";
-import "./App.css";
-import { Footer } from "./components/Footer/Footer";
-import { MostActiveUsers } from "./components/MostActiveUsers/MostActiveUsers";
-import { NavBar } from "./components/NavBar/NavBar";
-import { TopRepositories } from "./components/TopRepositories/TopRepositories";
-import { TrendingUsers } from "./components/TrendingUsers/TrendingUsers";
-import { AppActions } from "./store/app/actions";
+import React, { useEffect } from 'react';
+import { useDispatch } from 'react-redux';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+import './App.css';
+import { Footer } from './components/Footer/Footer';
+import { NavBar } from './components/NavBar/NavBar';
+import Dashboard from './pages/Dashboard/Dashboard';
+import TopResposOfUser from './pages/TopReposOfUser/TopReposOfUser';
+import { AppActions } from './store/app/actions';
 
 function App() {
   const dispatch = useDispatch();
@@ -17,13 +17,16 @@ function App() {
   }, []);
 
   return (
-    <div className="App">
-      <NavBar />
-      <TrendingUsers />
-      <MostActiveUsers />
-      <TopRepositories />
-      <Footer />
-    </div>
+    <Router>
+      <div className='App'>
+        <NavBar />
+        <Routes>
+          <Route path='/' element={<Dashboard />} />
+          <Route path='/:user' element={<TopResposOfUser />} />
+        </Routes>
+        <Footer />
+      </div>
+    </Router>
   );
 }
 

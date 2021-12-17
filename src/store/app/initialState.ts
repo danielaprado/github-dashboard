@@ -1,4 +1,4 @@
-import { AppStateModel } from "./model";
+import { AppStateModel } from './model';
 
 export const initialState: AppStateModel = {
   trendingUsers: {

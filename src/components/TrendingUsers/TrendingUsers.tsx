@@ -1,11 +1,11 @@
-import { useSelector } from "react-redux";
-import { UsersModel } from "../../models/UsersModel";
-import { AppState } from "../../store/rootReducer";
-import { generateGuid } from "../../utils/generateGuid";
-import { Loader } from "../Loader/Loader";
-import { NotFound } from "../NotFound/NotFound";
-import { UserDetailsCard } from "./UserDetailsCard/UserDetailsCard";
-import "./TrendingUsers.css";
+import { useSelector } from 'react-redux';
+import { UsersModel } from '../../models/UsersModel';
+import { AppState } from '../../store/rootReducer';
+import { Loader } from '../Loader/Loader';
+import { NotFound } from '../NotFound/NotFound';
+import { UserDetailsCard } from './UserDetailsCard/UserDetailsCard';
+import './TrendingUsers.css';
+import { generateGuid } from '../../utils/generateGuid';
 
 export const TrendingUsers = (): JSX.Element => {
   const trendingUsers: UsersModel = useSelector(
@@ -18,8 +18,8 @@ export const TrendingUsers = (): JSX.Element => {
 
   return (
     <>
-      <div className="trending-user-title">Trending Users</div>
-      <div className="trending-user-grid">
+      <div className='trending-user-title'>Trending Users</div>
+      <div className='trending-user-grid'>
         {!hasError ? (
           trendingUsers?.items?.length > 0 ? (
             trendingUsers.items.map((user) => (
